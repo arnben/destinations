@@ -9,13 +9,4 @@ import lombok.Getter;
 @Getter
 public class ConnectedApiResponse {
     private String result;
-
-    @JsonInclude(Include.NON_NULL)
-    private ErrorResponse error;
-
-    @Builder
-    @Getter
-    public static class ErrorResponse {
-        private String message;
-    }
 }
