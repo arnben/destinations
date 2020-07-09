@@ -4,6 +4,7 @@ package com.alben.destinations.services;
 import com.alben.destinations.models.Route;
 import com.alben.destinations.repositories.RoutesRepository;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -26,7 +27,7 @@ class DestinationsServiceTest {
     @Mock
     private RoutesRepository routesRepository;
 
-    @BeforeAll
+    @BeforeEach
     public void initAll() {
         List<Route> routes = new ArrayList<>();
         routes.add(Route.builder().pointA("Boston").pointB("New York").build());
